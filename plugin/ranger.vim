@@ -1,5 +1,5 @@
 " forked from
-" https://github.com/hut/ranger/blob/master/examples/vim_file_chooser.vim
+" https://github.com/Mizuchi/vim-ranger
 "
 
 if !exists('g:ranger_executable')
