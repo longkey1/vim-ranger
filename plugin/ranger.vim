@@ -1,13 +1,13 @@
-" forked from 
+" forked from
 " https://github.com/hut/ranger/blob/master/examples/vim_file_chooser.vim
 "
 
 if !exists('g:ranger_executable')
-  let g:ranger_executable = 'ranger'
+    let g:ranger_executable = 'ranger'
 endif
 
 if !exists('g:ranger_open_mode')
-  let g:ranger_open_mode = 'tabe'
+    let g:ranger_open_mode = 'tabe'
 endif
 
 function! s:RangerChooserForAncientVim(dirname)
