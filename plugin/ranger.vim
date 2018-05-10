@@ -6,6 +6,10 @@ if !exists('g:ranger_executable')
     let g:ranger_executable = 'ranger'
 endif
 
+if !executable(g:ranger_executable)
+    finish
+endif
+
 if !exists('g:ranger_open_mode')
     let g:ranger_open_mode = 'tabe'
 endif
