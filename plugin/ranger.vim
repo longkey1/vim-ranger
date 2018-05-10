@@ -22,17 +22,13 @@ function! s:RangerChooserForAncientVim(dirname)
         exec 'silent !' . g:ranger_executable . ' --choosefiles=' . shellescape(temp) . ' ' . a:dirname
     endif
     if !filereadable(temp)
-        " close window if nothing to read, probably user closed ranger
-        close
-        redraw!
-        return
+        " quit window if nothing to read, probably user closed ranger
+        quit
     endif
     let names = readfile(temp)
     if empty(names)
-        " close window if nothing to open.
-        close
-        redraw!
-        return
+        " quit window if nothing to open.
+        quit
     endif
     " Edit the first item.
     exec 'edit ' . fnameescape(names[0])
